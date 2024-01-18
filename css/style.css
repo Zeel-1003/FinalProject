@@ -3,6 +3,16 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --primary-color: white;
+    --secondary-color: #212121;
+}
+.bg-primary{
+    background-color: white !important;
+}
+.bg-secondary{
+    background-color: var(--secondary-colors);
+}
 .doctor_login{
     width: 100%;
     height: 100vh;
@@ -16,7 +26,16 @@
     text-align: center;
 }
 .inputfield{
-    width: 25vw;
+    width: 20vw;
+    border: none !important;
+    /* position: relative; */
+}
+/* .btn-sub{
+    width: 22vw;
+} */
+.position-absolute{
+    position: absolute;
+    right: 0;
 }
 .btn-primary{
     background-color: #01bce9;
@@ -26,13 +45,35 @@
     padding: 0.7rem;
     font-size: 16px;
 }
+.button-primary{
+    background-color: #01bce9;
+    border: none;
+    border-radius: 5px;
+    color: rgb(230, 230, 212);
+    padding: 0.7rem;
+    font-size: 16px;
+}
+.button-secondary{
+    background-color: #211f79;
+    border: none;
+    border-radius: 5px;
+    color: rgb(230, 230, 212);
+    padding: 0.7rem;
+    font-size: 16px;
+}
+.input-container{
+    border: 1px solid rgb(196, 195, 195) !important;
+    border-radius: 5px;
+}
 .form-control:focus{
-    border-color: #01bce9;
     box-shadow: none !important;
 }
-.form-control:focus + .form-label {
+.form-control:focus-within{
+    border-color: #01bce9 !important;
+}
+.form-control:focus + .form-label{
     color: #01bce9 !important;
-  }
+}
 .forgot-pass{
     color: #01bce9;
     text-decoration: none;
@@ -57,29 +98,108 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 .login-container::before{
     content: '';
-    background-image: url('../images/doctor_login.jpg');
-
+    background-image: url('../images/login_bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.10;
+    filter: blur(3px);
+    opacity: 0.2;
 }
 .blue-text{
     color: #01bce9;
     font-size: 20px;
 }
+.moon-icon{
+    position: absolute;
+    right: 0;
+}
+
 .hellodoc-patient{
     width: 40%;
     position: absolute;
     top: 0;
+}
+.submitreq-container{
+    width: 45%;
+    margin: auto;
+    min-height: 100vh;
+}
+/* patient request */
+.logo{
+    width: 145px;
+    height: auto;
+    margin-left: 2vw;
+}
+.nav-moon{
+    position: absolute;
+    width: 40px;
+    right: 4px;
+    top: 7px;
+    margin-top: 0.5rem;
+    height: 40px;
+}
+.navbar{
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.15);
+}
+.introtext{
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 300px;
+}
+.bg-blue{
+    background-color: #e9eaef;
+    border: 1px solid #9ca5c7;
+}
+.bg-skyblue{
+    background-color: #e5f1f9;
+    border: 1px solid #66afc7;
+}
+.bg-green{
+    background-color: #e7f7ed;
+    border: 1px solid #aebe9c;
+}
+.bg-magenta{
+    background-color: #f0e6eb;
+    border: 1px solid #dd9cc5;
+}
+.text-blue{
+    color: #667ccf;
+}
+.text-skyblue{
+    color: #0cc3e1;
+}
+.text-green{
+    color: #24a54f;
+}
+.text-magenta{
+    color: rgb(202, 16, 171);;
+}
+.fw-400{
+    font-weight: 500;
+    font-size: 23px;
+}
+.back{
+    font-size: 20px;
+    color: #0cc3e1;
+}
+.back-btn{
+    border: 1px solid #4793da;
+    border-radius: 6px;
+}
+.footer-fixed{
+    position: absolute;
+    /* right: 0; */
+    bottom: 0;
 }
 @media screen and (max-width: 650px){
     .disp-none{
@@ -94,10 +214,36 @@
     .inputfield{
         width: 33vw;
     }
+    
+    
+}
+@media screen and (max-width: 820px){
+    .inputfield{
+        width: 50vw;
+    }
 }
 @media screen and (max-width: 568px){
     .inputfield{
         width: 70vw;
+    }
+    .fw-400{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .submitreq-container::before{
+        content: '';
+        background-image: url('../images/login_bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        filter: blur(3px);
+        opacity: 0.2;
     }
 }
 @media screen and (max-width: 1250px){
