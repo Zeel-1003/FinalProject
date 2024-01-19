@@ -27,7 +27,7 @@
 }
 .inputfield{
     width: 20vw;
-    border: none !important;
+    /* border: none !important; */
     /* position: relative; */
 }
 /* .btn-sub{
@@ -36,14 +36,6 @@
 .position-absolute{
     position: absolute;
     right: 0;
-}
-.btn-primary{
-    background-color: #01bce9;
-    border: none;
-    border-radius: 5px;
-    color: rgb(230, 230, 212);
-    padding: 0.7rem;
-    font-size: 16px;
 }
 .button-primary{
     background-color: #01bce9;
@@ -138,18 +130,18 @@
 .logo{
     width: 145px;
     height: auto;
-    margin-left: 2vw;
+    margin: 0 !important; 
 }
 .nav-moon{
     position: absolute;
     width: 40px;
     right: 4px;
-    top: 7px;
-    margin-top: 0.5rem;
+    top: 22px;
+    /* margin-top: 0.5rem; */
     height: 40px;
 }
 .navbar{
-    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 10px 10px -1px rgba(0, 0, 0, 0.15);
 }
 .introtext{
     border-radius: 5px;
@@ -159,18 +151,22 @@
 .bg-blue{
     background-color: #e9eaef;
     border: 1px solid #9ca5c7;
+    height: 5vh;
 }
 .bg-skyblue{
     background-color: #e5f1f9;
     border: 1px solid #66afc7;
+    height: 5vh;
 }
 .bg-green{
     background-color: #e7f7ed;
     border: 1px solid #aebe9c;
+    height: 5vh;
 }
 .bg-magenta{
     background-color: #f0e6eb;
     border: 1px solid #dd9cc5;
+    height: 5vh;
 }
 .text-blue{
     color: #667ccf;
@@ -194,12 +190,16 @@
 }
 .back-btn{
     border: 1px solid #4793da;
+    box-shadow: -1px -1px 1px 1px rgba(71, 147, 218, 0.2);
     border-radius: 6px;
 }
 .footer-fixed{
     position: absolute;
     /* right: 0; */
     bottom: 0;
+}
+.patient-req-div{
+    width: 50vw;
 }
 @media screen and (max-width: 650px){
     .disp-none{
@@ -214,8 +214,28 @@
     .inputfield{
         width: 33vw;
     }
+    .patient-req-div{
+        width: 75vw;
+    }
     
-    
+}
+
+.btn-primary{
+    background-color: white;
+    border: 1px solid #01bce9;
+    border-radius: 5px;
+    color: #01bce9;
+    padding: 0.3rem;
+    font-size: 16px;
+}
+
+.btn-primary:hover{
+    background-color: #01bce9;
+    border: 1px solid #01bce9;
+    border-radius: 5px;
+    color: white;
+    padding: 0.3rem;
+    font-size: 16px;
 }
 @media screen and (max-width: 820px){
     .inputfield{
@@ -245,9 +265,62 @@
         filter: blur(3px);
         opacity: 0.2;
     }
+    #phone {
+        width: 89vw !important;
+    }
+    .patient-req-div{
+        width: 95vw !important;
+    }
+    .w-back-btn{
+        width: 98vw !important;
+    }
 }
 @media screen and (max-width: 1250px){
     .heading{
         font-size: 25px;
     }
+    .patient-req-div{
+        width: 70vw;
+    }
+    .w-back-btn{
+        width: 85vw !important; 
+    }
+}
+.w-back-btn{
+    width: 75vw;
+}
+
+.border{
+    box-shadow: 0 0 15px #cacaca !important;
+    border: none !important;
+    border-radius: 5px;
+}
+#yourBtn {
+    position: relative;
+    
+    font-family: calibri;
+    width: 150px;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px dashed #BBB;
+    text-align: center;
+    background-color: #01bce9;
+    color: white;
+    cursor: pointer;
+  }
+  .iti{
+    width: 100%;
+  }
+  #phone {
+    
+    height: calc(3.2rem + calc(var(--bs-border-width) * 2)) !important;
+    border-radius: 6px;
+    border:1px solid #dbe5e7;
+}
+.z-index{
+    z-index: 1000 !important;
+}
+.z-0{
+    z-index: 1;
 }
